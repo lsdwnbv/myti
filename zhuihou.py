@@ -373,7 +373,9 @@ with tab6:  # 修正：使用定义好的选项卡变量tab6
         st.title('**个人简介**')
         st.write(intro if intro else "请填写个人简介")  # 为空时提示
 with tab7:
-    st.subheader("扩展器")
-with st.expander("点击展开", expanded=True):
-    st.write("再次点击关闭")
+    st.subheader("扩展器示例")  # 标题与扩展器同属tab7，需统一缩进
+    # 扩展器代码缩进在with tab7块内，确保属于当前选项卡
+    with st.expander("点击展开", expanded=True):  # expanded=True：默认展开状态
+        st.write("再次点击关闭")
     
+
